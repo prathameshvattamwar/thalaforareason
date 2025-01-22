@@ -1,0 +1,383 @@
+/* Universal Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #FFD862; /* Updated Yellow */
+    color: #333;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+section{
+    min-height: 100vh;
+}
+
+/* Header Section */
+header .hero {
+    background: url('') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    /* padding: 5rem 2rem; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header .hero h1 {
+    font-size: 5rem;
+    /* margin-bottom: 1rem; */
+    text-shadow: 2px 2px 5px #333;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+header .hero h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(50, 160, 255);
+    left: 0;
+    bottom: 10px;
+}
+
+header .hero p {
+    font-size: 24px;
+    font-weight: 300;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: 600;
+    color: #7387ff;
+}
+
+.highlight {
+    color: #7387ff; 
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Intro Section */
+#intro {
+    padding: 3rem 1.5rem;
+    background: linear-gradient(to bottom, #FFFBE5, #FFD862); /* Updated Gradient */
+    text-align: center;
+    border-bottom: 5px solid #FFD862;
+}
+
+#intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    /* margin-bottom: 1.5rem; */
+    color: #555;
+}
+
+
+#intro img {
+    width: 300px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    transition: all 0.3s ease-in;
+}
+
+#intro img:hover {
+    filter: grayscale(1);
+}
+
+/* Facts Section */
+#facts {
+    padding: 3rem 1rem;
+    background: #FFFBE5; /* Softer background for contrast */
+}
+
+#facts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.fact {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.fact:hover {
+    transform: scale(1.05);
+}
+
+.fact i {
+    color: #FFD862; /* Updated Yellow */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    animation: rotate 2s infinite linear;
+}
+
+/* Legacy Section */
+#legacy {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(to bottom, #FFD862, #FFFBE5); /* Updated Gradient */
+    text-align: center;
+}
+
+#legacy h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#legacy p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+#legacy .legacy-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;
+    color: #FFD862; /* Updated Yellow */
+    margin-bottom: 1rem;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#legacy blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    border-left: 5px solid #FFD862;
+    padding-left: 1rem;
+    width: fit-content;
+    margin: 3rem auto 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+footer i {
+    color: red;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFBE5; /* Light yellow track background */
+    border-radius: 10px; /* Rounded track corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFD862; /* Trending yellow scrollbar */
+    border-radius: 10px; /* Rounded scrollbar */
+    border: 3px solid #FFFBE5; /* Adds padding effect for contrast */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FDCB3D; /* Darker yellow for hover effect */
+}
+
+/* Base Styles are for Desktop */
+
+/* Tablet View (768px to 1024px) */
+@media (max-width: 1024px) {
+    header .hero h1 {
+        font-size: 4rem; /* Adjust title size */
+    }
+
+    header .hero p {
+        font-size: 20px; /* Adjust subtitle size */
+    }
+
+    #intro h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    #intro p {
+        font-size: 1rem; /* Adjust paragraph size */
+        line-height: 1.5;
+    }
+
+    #intro img {
+        width: 250px; /* Smaller image for tablets */
+    }
+
+    #facts h2,
+    #legacy h2 {
+        font-size: 2rem; /* Adjust headings for smaller screens */
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+
+    .highlight-card {
+        width: 200px; /* Reduce card size */
+    }
+}
+
+/* Mobile View (Up to 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce base font size for readability */
+    }
+
+    header .hero {
+        padding: 2rem 1rem;
+        min-height: 80vh; /* Reduce height for mobile */
+    }
+
+    header .hero h1 {
+        font-size: 2rem; /* Smaller title size */
+    }
+
+    header .hero h1::after{
+        width: 0;
+    }
+
+    header .hero p {
+        font-size: 18px; /* Adjust subtitle size */
+    }
+
+    #intro h2,
+    #facts h2,
+    #legacy h2 {
+        font-size: 1.8rem; /* Smaller headings */
+    }
+
+    #intro p {
+        font-size: 0.9rem;
+        line-height: 1.4; /* Adjust paragraph line height */
+    }
+
+    #intro img {
+        width: 200px; /* Smaller image for mobile */
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+    }
+
+    .highlight-card {
+        width: 90%; /* Smaller cards for mobile */
+        padding: 1rem; /* Less padding */
+    }
+
+    #legacy p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce footer text size */
+    }
+}
+
+/* Large Desktop View (Above 1280px) */
+@media (min-width: 1280px) {
+    header .hero {
+        padding: 6rem 3rem;
+        min-height: 100vh; /* Full height for larger screens */
+    }
+
+    header .hero h1 {
+        font-size: 5.5rem; /* Bigger title for large screens */
+    }
+
+    header .hero p {
+        font-size: 26px; /* Larger subtitle */
+    }
+
+    #intro img {
+        width: 350px; /* Larger image for desktops */
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(4, 1fr); /* More columns on larger screens */
+    }
+
+    .highlight-card {
+        width: 280px; /* Larger cards */
+        padding: 2rem; /* More padding for spacious layout */
+    }
+}
