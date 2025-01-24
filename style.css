@@ -6,16 +6,27 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body and Background */
 body {
-    background-color: #FFD862; /* Updated Yellow */
+    background-color: #FFD862; 
     color: #333;
     scroll-behavior: smooth;
     line-height: 1.6;
 }
 
-section{
-    min-height: 100vh;
+section {
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+}
+
+.fact, 
+#intro, 
+#legacy .highlight-card {
+    will-change: transform, opacity;
 }
 
 /* Header Section */
@@ -23,7 +34,6 @@ header .hero {
     background: url('') no-repeat center center/cover;
     text-align: center;
     color: #fff;
-    /* padding: 5rem 2rem; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,6 +41,7 @@ header .hero {
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: filter 0.3s ease, opacity 0.3s ease; 
 }
 
 header .hero h1 {
