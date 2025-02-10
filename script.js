@@ -5,17 +5,17 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(
   "#intro",
   {
-    opacity: 0, // Start state
+    opacity: 0, 
     y: 50,
   },
   {
     scrollTrigger: {
       trigger: "#intro",
-      start: "top 75%", // Start when 75% of the section is in the viewport
-      end: "bottom 25%", // End when 25% of the section is in the viewport
+      start: "top 75%", 
+      end: "bottom 25%", 
       scrub: true,
     },
-    opacity: 1, // End state
+    opacity: 1, 
     y: 0,
     ease: "power2.inOut",
   }
@@ -25,7 +25,7 @@ gsap.fromTo(
 gsap.fromTo(
   ".fact",
   {
-    opacity: 0, // Start state
+    opacity: 0, 
     y: 30,
   },
   {
@@ -35,9 +35,9 @@ gsap.fromTo(
       end: "bottom 20%",
       scrub: true,
     },
-    opacity: 1, // End state
+    opacity: 1, 
     y: 0,
-    stagger: 0.2, // Add delay for each ".fact" card
+    stagger: 0.2, 
     ease: "power1.out",
   }
 );
@@ -82,7 +82,7 @@ gsap.to("header", {
   scrollTrigger: {
     trigger: "header",
     start: "top top",
-    end: "+=200", // Pin header for 200px
+    end: "+=200", 
     scrub: true,
     pin: true,
   },
